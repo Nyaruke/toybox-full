@@ -19,7 +19,7 @@ source=(
     # Alternative link (checksum will be different due to compression): "https://github.com/landley/${pkgname}/archive/${pkgver}.tar.gz"
 )
 sha256sums=('ad88a921133ae2231d9f2df875ec0bd42af4429145caea7d7db9e02208a6fd2e'
-            'SKIP')
+            'efff0a918886061276f94d7ee5793f36cf714ab3e91cbc25bc5655db60b7bfd8')
 
 build() {
   cd "${srcdir}/${_pkgname}-${pkgver}"
