@@ -12,7 +12,7 @@ arch=('i686' 'x86_64' 'armv6h' 'armv7h')
 url='https://landley.net/toybox'
 license=('BSD')
 depends=('attr')
-conflicts=('toybox')
+conflicts=('toybox' 'toybox-debug')
 source=(
     "https://landley.net/${_pkgname}/downloads/${_pkgname}-${pkgver}.tar.gz"
     "defconfig"
