@@ -21,12 +21,17 @@ source=(
 sha256sums=('ad88a921133ae2231d9f2df875ec0bd42af4429145caea7d7db9e02208a6fd2e'
             'efff0a918886061276f94d7ee5793f36cf714ab3e91cbc25bc5655db60b7bfd8')
 
-build() {
+prepare() {
   cd "${srcdir}/${_pkgname}-${pkgver}"
 
   make defconfig
   cp -f "${srcdir}/defconfig" "${srcdir}/${_pkgname}-${pkgver}/.config"
-  
+  make oldconfig
+}
+
+build() {
+  cd "${srcdir}/${_pkgname}-${pkgver}"
+
   NOSTRIP=1 make
 }
 
